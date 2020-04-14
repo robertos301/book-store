@@ -9,40 +9,29 @@ import {
   auth,
   createUserProfileDocument,
 } from "./components/firebase/firebase.utils";
+import { connect } from "react-redux";
+import { setCurrentUser } from "./redux/user/user.actions";
 
 class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      currentUser: null,
-    };
-  }
-
   unsubscribeFromAuth = null;
 
   //userAuth este contul aferent mail-ului google, un obiect gigant
   //userRef este rezultatul unui query executat pe baza de date firebase folosind userAuth
   componentDidMount() {
+    const { setCurrentUser } = this.props;
+
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
       if (userAuth) {
         const userRef = await createUserProfileDocument(userAuth);
 
         userRef.onSnapshot((snapShot) => {
-          this.setState(
-            {
-              currentUser: {
-                id: snapShot.id,
-                ...snapShot.data(),
-              }
-            },
-            () => {
-              console.log(this.state);
-            }
-          );
+          setCurrentUser({
+            id: snapShot.id,
+            ...snapShot.data(),
+          });
         });
-      } else {
-        this.setState({ currentUser: userAuth });
       }
+      setCurrentUser(userAuth);
     });
   }
 
@@ -53,7 +42,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Header currentUser={this.state.currentUser} />
+        <Header />
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/shop" component={ShopPage} />
@@ -64,4 +53,8 @@ class App extends React.Component {
   }
 }
 
-export default App;
+const mapDispatchToProps = (dispatch) => ({
+  setCurrentUser: (user) => dispatch(setCurrentUser(user)),
+});
+
+export default connect(null, mapDispatchToProps)(App);
