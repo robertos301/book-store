@@ -1,246 +1,295 @@
 const SHOP_DATA = {
-  hats: {
+  classics: {
     id: 1,
-    title: 'Hats',
-    routeName: 'hats',
+    title: 'Classics',
+    routeName: 'classics',
     items: [
       {
         id: 1,
-        name: 'Brown Brim',
-        imageUrl: 'https://i.ibb.co/ZYW3VTp/brown-brim.png',
+        name: '1984',
+        imageUrl: 'https://m.media-amazon.com/images/I/51ueoexgYqL.jpg',
         price: 25
       },
       {
         id: 2,
-        name: 'Blue Beanie',
-        imageUrl: 'https://i.ibb.co/ypkgK0X/blue-beanie.png',
+        name: 'Pride and Prejudice',
+        imageUrl: 'https://whitcoulls-co-nz.imgix.net/products/17/15/6381517_MAIN~1552017581.jpg?w=416&h=620&fit=fill&auto=format&fill=solid&fill-color=ffffff&s=9fc84288f9128c788ff036d67e5e7a61',
         price: 18
       },
       {
         id: 3,
-        name: 'Brown Cowboy',
-        imageUrl: 'https://i.ibb.co/QdJwgmp/brown-cowboy.png',
+        name: 'The picture of dorian gray',
+        imageUrl: 'https://hanabooktopia.com/wp-content/uploads/2020/02/Screenshot_2020-02-21-English-Classics-The-Picture-of-Dorian-Gray-Gramedia-Pustaka-Utama.png',
         price: 35
       },
       {
         id: 4,
-        name: 'Grey Brim',
-        imageUrl: 'https://i.ibb.co/RjBLWxB/grey-brim.png',
+        name: 'One Hundred Years of Solitude',
+        imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/6152SClqZ6L._SX318_BO1,204,203,200_.jpg',
         price: 25
       },
       {
         id: 5,
-        name: 'Green Beanie',
-        imageUrl: 'https://i.ibb.co/YTjW3vF/green-beanie.png',
+        name: 'War and Peace',
+        imageUrl: 'https://images.penguinrandomhouse.com/cover/9781400079988',
         price: 18
       },
       {
         id: 6,
-        name: 'Palm Tree Cap',
-        imageUrl: 'https://i.ibb.co/rKBDvJX/palm-tree-cap.png',
+        name: 'Anna Karenina',
+        imageUrl: 'https://pictures.abebooks.com/isbn/9781582881058-uk.jpg',
         price: 14
       },
       {
         id: 7,
-        name: 'Red Beanie',
-        imageUrl: 'https://i.ibb.co/bLB646Z/red-beanie.png',
+        name: 'The Red and the Black',
+        imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/51aMogAGExL._SX384_BO1,204,203,200_.jpg',
         price: 18
       },
       {
         id: 8,
-        name: 'Wolf Cap',
-        imageUrl: 'https://i.ibb.co/1f2nWMM/wolf-cap.png',
+        name: 'The Catcher in the Rye',
+        imageUrl: 'https://wordery.com/jackets/e6c04264/m/the-catcher-in-the-rye-j-d-salinger-9780241950425.jpg',
         price: 14
       },
       {
         id: 9,
-        name: 'Blue Snapback',
-        imageUrl: 'https://i.ibb.co/X2VJP2W/blue-snapback.png',
+        name: 'To Kill a Mockingbird',
+        imageUrl: 'https://prodimage.images-bn.com/pimages/9780446310789_p0_v6_s1200x630.jpg',
         price: 16
       }
     ]
   },
-  sneakers:{
+  sciencefiction:{
     id: 2,
-    title: 'Sneakers',
-    routeName: 'sneakers',
+    title: 'Science Fiction',
+    routeName: 'sciencefiction',
     items: [
       {
         id: 10,
-        name: 'Adidas NMD',
-        imageUrl: 'https://i.ibb.co/0s3pdnc/adidas-nmd.png',
-        price: 220
+        name: 'Red Rising',
+        imageUrl: 'https://cdn.dc5.ro/img-prod/264762-0.jpeg',
+        price: 26
       },
       {
         id: 11,
-        name: 'Adidas Yeezy',
-        imageUrl: 'https://i.ibb.co/dJbG1cT/yeezy.png',
-        price: 280
+        name: 'Skyward',
+        imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/91WalCe0LyL.jpg',
+        price: 32
       },
       {
         id: 12,
-        name: 'Black Converse',
-        imageUrl: 'https://i.ibb.co/bPmVXyP/black-converse.png',
-        price: 110
+        name: 'Artemis',
+        imageUrl: 'https://images.squarespace-cdn.com/content/5459265fe4b003569098a14f/1517614972282-Y8TB0VL7V32FF0BSHB5Y/artemis.jpg?content-type=image%2Fjpeg',
+        price: 14
       },
       {
         id: 13,
-        name: 'Nike White AirForce',
-        imageUrl: 'https://i.ibb.co/1RcFPk0/white-nike-high-tops.png',
-        price: 160
+        name: 'Metro 2033',
+        imageUrl: 'https://i0.books-express.ro/be/9780575086258/metro-2033.jpg',
+        price: 23
       },
       {
         id: 14,
-        name: 'Nike Red High Tops',
-        imageUrl: 'https://i.ibb.co/QcvzydB/nikes-red.png',
-        price: 160
+        name: 'Neuromancer',
+        imageUrl: 'https://ryanyarber.files.wordpress.com/2017/11/neuromancer.jpg?w=615',
+        price: 20
       },
       {
         id: 15,
-        name: 'Nike Brown High Tops',
-        imageUrl: 'https://i.ibb.co/fMTV342/nike-brown.png',
-        price: 160
+        name: 'Ready Player One',
+        imageUrl: 'https://images.penguinrandomhouse.com/cover/9780804190138',
+        price: 14
       },
       {
         id: 16,
-        name: 'Air Jordan Limited',
-        imageUrl: 'https://i.ibb.co/w4k6Ws9/nike-funky.png',
-        price: 190
+        name: 'Dune',
+        imageUrl: 'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1555447414l/44767458.jpg',
+        price: 30
       },
       {
         id: 17,
-        name: 'Timberlands',
-        imageUrl: 'https://i.ibb.co/Mhh6wBg/timberlands.png',
-        price: 200
+        name: 'Dark Age',
+        imageUrl: 'https://i1.books-express.ro/be/9781473646766/dark-age.jpg',
+        price: 25
       }
     ]
   },
-  jackets:{
+  fantasy:{
     id: 3,
-    title: 'Jackets',
-    routeName: 'jackets',
+    title: 'Fantasy',
+    routeName: 'fantasy',
     items: [
       {
         id: 18,
-        name: 'Black Jean Shearling',
-        imageUrl: 'https://i.ibb.co/XzcwL5s/black-shearling.png',
-        price: 125
+        name: 'Lord of the RIngs',
+        imageUrl: 'https://www.itprojektid.ee/testulesanne/wp/martin-raba/wp-content/uploads/2017/10/lord.jpg',
+        price: 15
       },
       {
         id: 19,
-        name: 'Blue Jean Jacket',
-        imageUrl: 'https://i.ibb.co/mJS6vz0/blue-jean-jacket.png',
-        price: 90
+        name: 'A Game of Thrones',
+        imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/81q1AybR-ZL.jpg',
+        price: 25
       },
       {
         id: 20,
-        name: 'Grey Jean Jacket',
-        imageUrl: 'https://i.ibb.co/N71k1ML/grey-jean-jacket.png',
-        price: 90
+        name: 'The Way of Kings',
+        imageUrl: 'https://i2.books-express.ro/be/9780765365279/the-way-of-kings.jpg',
+        price: 33
       },
       {
         id: 21,
-        name: 'Brown Shearling',
-        imageUrl: 'https://i.ibb.co/s96FpdP/brown-shearling.png',
-        price: 165
+        name: 'Mistborn',
+        imageUrl: 'https://i3.books-express.ro/be/9780765377135/mistborn.jpg',
+        price: 16
       },
       {
         id: 22,
-        name: 'Tan Trench',
-        imageUrl: 'https://i.ibb.co/M6hHc3F/brown-trench.png',
-        price: 185
+        name: 'Blood of Elves',
+        imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/51bcWeEIMwL._SX298_BO1,204,203,200_.jpg',
+        price: 25
+      },
+      {
+        id:36,
+        name: 'The Name of the Wind',
+        imageUrl: 'https://i0.books-express.ro/be/9780575081406/the-name-of-the-wind.jpg',
+        price: 31
+      },
+      {
+        id:37,
+        name: 'The Gunslinger',
+        imageUrl:'https://covers.openlibrary.org/b/id/8397487-L.jpg',
+        price: 22
       }
     ]
   },
-  womens:{
+  fiction:{
     id: 4,
-    title: 'Womens',
-    routeName: 'womens',
+    title: 'Fiction',
+    routeName: 'fiction',
     items: [
       {
         id: 23,
-        name: 'Blue Tanktop',
-        imageUrl: 'https://i.ibb.co/7CQVJNm/blue-tank.png',
+        name: '1Q84',
+        imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/71OQmqENFgL.jpg',
         price: 25
       },
       {
         id: 24,
-        name: 'Floral Blouse',
-        imageUrl: 'https://i.ibb.co/4W2DGKm/floral-blouse.png',
+        name: 'The Humans',
+        imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/51-vBpG1ztL._SX324_BO1,204,203,200_.jpg',
         price: 20
       },
       {
         id: 25,
-        name: 'Floral Dress',
-        imageUrl: 'https://i.ibb.co/KV18Ysr/floral-skirt.png',
-        price: 80
+        name: 'American Gods',
+        imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/51Pb-OAREFL._SX327_BO1,204,203,200_.jpg',
+        price: 42
       },
       {
         id: 26,
-        name: 'Red Dots Dress',
-        imageUrl: 'https://i.ibb.co/N3BN1bh/red-polka-dot-dress.png',
-        price: 80
+        name: 'Station Eleven',
+        imageUrl: 'https://mcdn.elefant.ro/mnresize/1500/1500/images/86/1213786/station-eleven-hardcover_1_fullsize.jpg',
+        price: 32
       },
       {
         id: 27,
-        name: 'Striped Sweater',
-        imageUrl: 'https://i.ibb.co/KmSkMbH/striped-sweater.png',
-        price: 45
+        name: 'All the Light We Cannot See',
+        imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/81v5wp2zeQL.jpg',
+        price: 27
       },
       {
         id: 28,
-        name: 'Yellow Track Suit',
-        imageUrl: 'https://i.ibb.co/v1cvwNf/yellow-track-suit.png',
-        price: 135
+        name: 'Brave New World',
+        imageUrl: 'https://ih0.redbubble.net/image.349104734.5875/flat,550x550,075,f.jpg',
+        price: 15
       },
       {
         id: 29,
-        name: 'White Blouse',
-        imageUrl: 'https://i.ibb.co/qBcrsJg/white-vest.png',
+        name: 'Norwegian Wood',
+        imageUrl: 'https://mcdn.elefant.ro/mnresize/1500/1500/is/product-images/cartero/a146d56c/0e0f/4264/b124/fb7a750f72f6/a146d56c-0e0f-4264-b124-fb7a750f72f6_1.jpg',
         price: 20
       }
     ]
   },
- mens: {
+ selfdevelopment: {
     id: 5,
-    title: 'Mens',
-    routeName: 'mens',
+    title: 'Self Development',
+    routeName: 'selfdevelopment',
     items: [
       {
         id: 30,
-        name: 'Camo Down Vest',
-        imageUrl: 'https://i.ibb.co/xJS0T3Y/camo-vest.png',
-        price: 325
+        name: 'Emotional Intelligence',
+        imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/81boBok4oJL.jpg',
+        price: 25
       },
       {
         id: 31,
-        name: 'Floral T-shirt',
-        imageUrl: 'https://i.ibb.co/qMQ75QZ/floral-shirt.png',
+        name: 'How to Win Friends and Influence People',
+        imageUrl: 'https://i0.books-express.ro/be/9780091906351/how-to-win-friends-and-influence-people.jpg',
         price: 20
       },
       {
         id: 32,
-        name: 'Black & White Longsleeve',
-        imageUrl: 'https://i.ibb.co/55z32tw/long-sleeve.png',
+        name: 'The Power of Habit',
+        imageUrl: 'https://i4.books-express.ro/be/9781847946249/the-power-of-habit.jpg',
         price: 25
       },
       {
         id: 33,
-        name: 'Pink T-shirt',
-        imageUrl: 'https://i.ibb.co/RvwnBL8/pink-shirt.png',
+        name: 'Mindset',
+        imageUrl: 'https://images-na.ssl-images-amazon.com/images/I/81dzW8COWCL.jpg',
         price: 25
       },
       {
         id: 34,
-        name: 'Jean Long Sleeve',
-        imageUrl: 'https://i.ibb.co/VpW4x5t/roll-up-jean-shirt.png',
+        name: 'The Power of Now',
+        imageUrl: 'https://www.dubraybooks.ie/images/thumbs/008/0082932_9780340733509_625.jpeg',
         price: 40
       },
       {
         id: 35,
-        name: 'Burgundy T-shirt',
-        imageUrl: 'https://i.ibb.co/mh3VM1f/polka-dot-shirt.png',
+        name: 'Ego is the Enemy',
+        imageUrl: 'https://i2.books-express.ro/be/9781781257029/ego-is-the-enemy.jpg',
         price: 25
+      }
+    ]
+  },
+  children: {
+    id:6,
+    title:'Children',
+    routeName:'children',
+    items:[
+      {
+        id:38,
+        name:'Atlas of the World - Pictures',
+        imageUrl:'https://usborne-media.azureedge.net/cdn-imagecache/4/e/9/8/e/2/4e98e25dab52aeaeee58fde8e6c2748e514178a3.jpg',
+        price: 18
+      },
+      {
+        id:39,
+        name:'Hey Warrior',
+        imageUrl:'https://www.heysigmund.com/wp-content/uploads/Hey-Warrior-Title-for-Website-800x1044.png',
+        price: 20
+      },
+      {
+        id:40,
+        name:'The Happy Lemon',
+        imageUrl:'https://marketplace.canva.com/EADaiDo2aSo/1/0/1003w/canva-yellow-lemon-children-book-cover-cse6GBuXy78.jpg',
+        price: 24
+      },
+      {
+        id:42,
+        name:'The Railway Children',
+        imageUrl:'https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/lrg/9780/1413/9780141321608.jpg',
+        price: 16
+      },
+      {
+       id:43,
+       name:'Wonder',
+       imageUrl:'https://images.squarespace-cdn.com/content/v1/5bb74928d86cc9740786f3a5/1552259999423-C1WCARMEJQKGW0XO2QZI/ke17ZwdGBToddI8pDm48kOKg-tW4Gl9JcdMFs16rnLRZw-zPPgdn4jUwVcJE1ZvWEtT5uBSRWt4vQZAgTJucoTqqXjS3CfNDSuuf31e0tVHhJnhISClUI9cxXW2oae7AfeH-uJN30JXrywMMdx45flCjiIQTTnXuXft9IwGL6S4/image-3.jpg',
+        price:23
       }
     ]
   }
