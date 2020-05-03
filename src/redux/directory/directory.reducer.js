@@ -11,7 +11,7 @@ const INITIAL_STATE = {
       title: "Science Fiction",
       imageURL: "https://img.aullidos.com/imagenes/noticias/tw-33600.jpg",
       id: 2,
-      linkURL: "shop/sciencefiction",
+      linkURL: "shop/science%20fiction",
     },
     {
       title: "Fantasy",
@@ -33,7 +33,7 @@ const INITIAL_STATE = {
       imageURL:
         "https://d19d5sz0wkl0lu.cloudfront.net/dims4/default/d475c4d/2147483647/resize/800x%3E/quality/90/?url=https%3A%2F%2Fatd-brightspot.s3.amazonaws.com%2Fcf%2Fbc%2F7aaa39744c52840ec3c2c19cb759%2Foperations-webinar-recap-header-2x.png",
       id: 5,
-      linkURL: "shop/selfdevelopment",
+      linkURL: "shop/self%20development",
     },
     {
       title: "Children",

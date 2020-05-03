@@ -15,18 +15,22 @@ import "./App.css";
 import {
   auth,
   createUserProfileDocument,
+  //addCollectionAndDocuments
 } from "./components/firebase/firebase.utils";
+
 import { connect } from "react-redux";
 import { setCurrentUser } from "./redux/user/user.actions";
+//import {selectCollectionsForPreview} from './redux/shop/shop.selectors'
 
 class App extends React.Component {
   unsubscribeFromAuth = null;
 
   //userAuth este contul aferent mail-ului google, un obiect gigant
   //userRef este rezultatul unui query executat pe baza de date firebase folosind userAuth
+  //collectionArray a fost folosit pentru a adauga programatic datele in firebase
   componentDidMount() {
-    const { setCurrentUser } = this.props;
-
+    //const { setCurrentUser, collectionsArray } = this.props;
+    const {setCurrentUser} = this.props
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
       if (userAuth) {
         const userRef = await createUserProfileDocument(userAuth);
@@ -39,6 +43,7 @@ class App extends React.Component {
         });
       }
       setCurrentUser(userAuth);
+     // addCollectionAndDocuments('collections', collectionsArray.map(({title,items}) => ({title, items}) ));
     });
   }
 
@@ -62,7 +67,8 @@ class App extends React.Component {
 }
 
 const mapStateToProps = createStructuredSelector({
-  currentUser: selectCurrentUser
+  currentUser: selectCurrentUser,
+  //collectionsArray: selectCollectionsForPreview
 })
 
 const mapDispatchToProps = (dispatch) => ({
